@@ -193,6 +193,10 @@ export type Portfolio = {
     pnl_pct: number;
     position_count: number;
     pyg_per_usd: number;
+    prices_updated_at: {
+        stock: string | null;
+        crypto: string | null;
+    };
     allocation: Array<{
         symbol: string;
         value_gs: number;
