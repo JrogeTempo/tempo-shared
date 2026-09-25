@@ -144,7 +144,7 @@ export type Overview = {
   top_merchants: Array<{ merchant: string; total_gs: number; txn_count: number }>;
 };
 
-export type Position = {
+export type Holding = {
   holding_id: string;
   symbol: string;
   name: string;
@@ -159,7 +159,7 @@ export type Position = {
   pnl_pct: number;
 };
 
-export type Trade = {
+export type InvestmentMovement = {
   id: string;
   side: 'buy' | 'sell';
   quantity: number;
@@ -168,7 +168,7 @@ export type Trade = {
   unit_price_native: number;
   fee_gs: number;
   broker: string | null;
-  traded_at: string;
+  occurred_at: string;
   instruments: { symbol: string; name: string; asset_type: string } | null;
 };
 
@@ -177,13 +177,13 @@ export type Portfolio = {
   total_cost_gs: number;
   pnl_gs: number;
   pnl_pct: number;
-  position_count: number;
+  holding_count: number;
   pyg_per_usd: number;
   prices_updated_at: { stock: string | null; crypto: string | null };
   allocation: Array<{ symbol: string; value_gs: number; weight: number }>;
-  positions: Position[];
-  best: Position | null;
-  worst: Position | null;
+  holdings: Holding[];
+  best: Holding | null;
+  worst: Holding | null;
 };
 
 export type Song = { title: string; artist: string; bpm: number; delta: number };
