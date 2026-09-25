@@ -56,7 +56,7 @@ export type Transaction = {
 };
 /** Used only by the unmatched-emails resolve/ignore quick-rule flow (a single sender/body condition, not the full rule builder). */
 export type MailRuleField = 'sender' | 'body' | 'merchant';
-export type ApplyRange = 'current_month' | 'previous_month' | 'last_3_months' | 'last_3_months_and_current';
+export type ApplyRange = 'current_month' | 'previous_month' | 'last_3_months' | 'last_3_months_and_current' | 'previous_month_and_current';
 export declare const APPLY_RANGE_LABEL: Record<ApplyRange, string>;
 export type RuleConditionType = 'contains' | 'from' | 'subject';
 export type RuleCondition = {
